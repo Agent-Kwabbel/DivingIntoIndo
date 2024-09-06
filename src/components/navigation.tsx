@@ -15,7 +15,7 @@ export function Navigation() {
     return (
       <header
         className="sticky top-0 z-30 flex h-14 justify-between items-center bg-background p-4 sm:h-auto sm:px-6">
-          <Link href="#" className="flex items-center justify-center hover:scale-110 transition-transform duration-200 " prefetch={false}>
+          <Link href="/" className="flex items-center justify-center hover:scale-110 transition-transform duration-200 " prefetch={false}>
               <MountainIcon className="h-6 w-6" />
               <span className="sr-only">Indonesia Travel Blog</span>
           </Link>
