@@ -19,29 +19,27 @@ export default async function Page({ params }: { params: { url: string } }) {
 
     return (
       <div className="flex flex-col min-h-[100dvh]">
-          <section className="w-full">
-              <Image
-                src={`/img/uploads/${post.image}`}
-                width={1920}
-                height={600}
-                alt={post.name}
-                className="aspect-[16/6] w-full object-cover"
-              />
-              <div className="container px-4 md:px-6 py-4 md:py-8">
-                  <div className="max-w-3xl mx-auto space-y-4">
-                      <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-                          {post.name}
-                      </h1>
-                      <div className="flex items-center space-x-4">
-                          <Author username={user?.name ?? 'Unknown Author'} />
-                          <Separator orientation="vertical" className="h-6" />
-                          <PublishDate date={post.createdAt} />
-                      </div>
+          <Image
+            src={`/img/uploads/${post.image}`}
+            width={1920}
+            height={600}
+            alt={post.name}
+            className="aspect-[16/6] w-full object-cover"
+          />
+          <div className="flex justify-center md:py-8">
+              <div className="w-3/4 sm:w-3/5 max-w-4xl mx-auto space-y-4">
+                  <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-6xl mt-4">
+                      {post.name}
+                  </h1>
+                  <div className="flex items-center space-x-4">
+                      <Author username={user?.name ?? 'Unknown Author'} />
+                      <Separator orientation="vertical" className="h-6" />
+                      <PublishDate date={post.createdAt} />
                   </div>
               </div>
-          </section>
-          <div className="container px-4 md:px-6 py-12 md:py-16 lg:py-20">
-              <article className="prose prose-gray mx-auto dark:prose-invert whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: post.content }} />
+          </div>
+          <div className="flex justify-center mt-4">
+              <article className="w-3/4 sm:w-3/5 max-w-4xl prose prose-gray mx-auto dark:prose-invert" dangerouslySetInnerHTML={{ __html: post.content }} />
           </div>
       </div>
     );
@@ -72,6 +70,6 @@ function PublishDate({ date }: { date: Date }) {
         dateStyle: "long",
     });
     return (
-      <p className="text-sm text-muted-foreground">Published on {dateString} UTC</p>
+      <p className="text-sm text-muted-foreground flex whitespace-pre"><span className="hidden sm:block">Published on </span>{dateString}<span className="hidden sm:block"> UTC</span></p>
     );
 }

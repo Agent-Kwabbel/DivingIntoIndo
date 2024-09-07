@@ -3,7 +3,6 @@ import { ArrowRightIcon } from "~/components/icons";
 import Link from "next/link";
 import Image from "next/image";
 import { db } from "~/server/db";
-import ReactMarkdown from "react-markdown";
 
 export async function BlogSection() {
     // Limit to 4 posts
@@ -26,7 +25,7 @@ export async function BlogSection() {
                             <CardContent className="space-y-2">
                                 <Image src={`/img/uploads/${post.image}`} width="400" height="225" alt="Blog Post" className="aspect-video rounded-md object-cover" />
                                 <h3 className="text-xl font-semibold">{post.name}</h3>
-                                <ReactMarkdown className="text-muted-foreground line-clamp-3">{post.content.substring(0, 300)}</ReactMarkdown>
+                                <p className="text-muted-foreground text-base line-clamp-3" dangerouslySetInnerHTML={{ __html: post.content.substring(0, 300) }} />
                                 <Link href={`/blog/${post.url}`} className="inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline">
                                     Read More
                                     <ArrowRightIcon className="h-4 w-4" />
