@@ -1,6 +1,6 @@
-import { Hero } from "@/src/components/home/hero";
-import { BlogSection } from "@/src/components/home/blogs";
-import { StatusSection } from "@/src/components/home/status";
+import { Hero } from "~/components/home/hero";
+import { BlogSection } from "~/components/home/blogs";
+import { StatusSection } from "~/components/home/status";
 
 export default function Home() {
     return (

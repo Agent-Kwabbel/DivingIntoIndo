@@ -1,7 +1,7 @@
 import "~/styles/globals.css";
 
-import { Navigation } from "@/src/components/navigation";
-import { Footer } from "@/src/components/footer";
+import { Navigation } from "~/components/navigation";
+import { Footer } from "~/components/footer";
 import { DM_Sans } from 'next/font/google'
 import { Space_Mono } from 'next/font/google'
 import { cn } from '~/lib/utils'

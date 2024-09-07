@@ -1,5 +1,5 @@
-import { Card, CardContent } from "@/src/components/ui/card";
-import { ArrowRightIcon } from "@/src/components/icons";
+import { Card, CardContent } from "~/components/ui/card";
+import { ArrowRightIcon } from "~/components/icons";
 import Link from "next/link";
 import Image from "next/image";
 

@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { NavigationMenu, NavigationMenuLink } from "@/src/components/ui/navigation-menu";
-import { Sheet, SheetTrigger, SheetContent } from "@/src/components/ui/sheet";
-import { Button } from "@/src/components/ui/button";
-import { MenuIcon, HomeIcon, BookIcon, UserIcon, MailIcon, MountainIcon } from "@/src/components/icons";
+import { NavigationMenu, NavigationMenuLink } from "~/components/ui/navigation-menu";
+import { Sheet, SheetTrigger, SheetContent } from "~/components/ui/sheet";
+import { Button } from "~/components/ui/button";
+import { MenuIcon, HomeIcon, BookIcon, UserIcon, MailIcon, MountainIcon } from "~/components/icons";
 
 const navigationMenuLinks = [
   { href: "/blog", label: "Blog", icon: <HomeIcon className="h-5 w-5" /> },

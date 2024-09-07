@@ -1,4 +1,4 @@
-import { ClockIcon } from "@/src/components/icons";
+import { ClockIcon } from "~/components/icons";
 import TimeDisplay from './time';
 
 type StatusType = "Upcoming" | "In Progress" | "Completed" | "Delayed" | "Postponed" | "Terminated" | "Extended";
