@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { NavigationMenu, NavigationMenuList, NavigationMenuLink } from "@/src/components/ui/navigation-menu";
+import { NavigationMenu, NavigationMenuLink } from "@/src/components/ui/navigation-menu";
 import { Sheet, SheetTrigger, SheetContent } from "@/src/components/ui/sheet";
 import { Button } from "@/src/components/ui/button";
 import { MenuIcon, HomeIcon, BookIcon, UserIcon, MailIcon, MountainIcon } from "@/src/components/icons";

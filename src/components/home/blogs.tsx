@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/src/components/ui/card";
 import { ArrowRightIcon } from "@/src/components/icons";
 import Link from "next/link";
+import Image from "next/image";
 
 export function BlogSection() {
     const posts = [
@@ -34,7 +35,7 @@ export function BlogSection() {
                     {posts.map((post, index) => (
                         <Card key={index}>
                             <CardContent className="space-y-2">
-                                <img src="/placeholder.svg" width="400" height="225" alt="Blog Post" className="aspect-video rounded-md object-cover" />
+                                <Image src="/placeholder.svg" width="400" height="225" alt="Blog Post" className="aspect-video rounded-md object-cover" />
                                 <h3 className="text-xl font-semibold">{post.title}</h3>
                                 <p className="text-muted-foreground line-clamp-3">{post.description}</p>
                                 <Link href="#" className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">

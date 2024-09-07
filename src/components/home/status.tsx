@@ -38,7 +38,7 @@ const statusOptions: Record<StatusType, { color: string; ping: boolean; descript
   },
 }
 
-let status: StatusType = "Upcoming";
+const status: StatusType = "Upcoming";
 
 export function StatusSection() {
     return (
