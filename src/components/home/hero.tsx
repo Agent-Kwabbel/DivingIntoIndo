@@ -1,11 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Hero() {
     return (
         <section className="w-full pt-4 pb-10 lg:pb-12 px-8 md:px-16">
             <div className=" w-full">
                 <div className="w-full grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-20 xl:grid-cols-[1fr_600px]">
-                    <img
+                    <Image
                         src={"/img/hero/" + Math.floor(Math.random() * 8) + ".webp"}
                         width="550"
                         height="550"
