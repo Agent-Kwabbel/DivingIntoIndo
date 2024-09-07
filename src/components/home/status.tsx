@@ -64,7 +64,7 @@ function Circle(status: { status: StatusType }) {
           {statusOptions[status.status].ping && (
             <span className={`absolute animate-ping inline-flex h-full w-full rounded-full ${statusOptions[status.status].color}`}></span>
           )}
-          <span className={`relative inline-flex rounded-full h-4 w-4 ${statusOptions[status.status].color}`} title="Is the status circle pusling? Than the trip is ongong!"></span>
+          <span className={`relative inline-flex rounded-full h-4 w-4 ${statusOptions[status.status].color}`} title="Is the status circle pusling? Than the trip is ongoing!"></span>
       </span>
     );
 }
