@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export function Hero() {
     return (
-        <section className="w-full pt-6 pb-10 lg:pt-8 lg:pb-12 px-8 md:px-16">
+        <section className="w-full pt-4 pb-10 lg:pb-12 px-8 md:px-16">
             <div className=" w-full">
-                <div className="w-full grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+                <div className="w-full grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-20 xl:grid-cols-[1fr_600px]">
                     <img
                         src={"/img/hero/" + Math.floor(Math.random() * 8) + ".webp"}
                         width="550"

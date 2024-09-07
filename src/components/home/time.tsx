@@ -26,7 +26,7 @@ const TimeDisplay: React.FC<TimeDisplayProps> = ({ city, timezone }) => {
   }
 
   return (
-      <p>{city}: {time}</p>
+      <p className="leading-[0.75rem]">{city}: {time}</p>
   );
 };
 
