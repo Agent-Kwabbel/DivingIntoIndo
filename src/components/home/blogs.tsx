@@ -21,7 +21,7 @@ export async function BlogSection() {
                     <ArrowRightIcon className="h-6 w-6 md:h-8 md:w-8" />
                 </Link>
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                    {posts.map((post, index) => (
+                    {posts.map((post) => (
                         <Card key={post.id}>
                             <CardContent className="space-y-2">
                                 <Image src={`/img/uploads/${post.image}`} width="400" height="225" alt="Blog Post" className="aspect-video rounded-md object-cover" />
