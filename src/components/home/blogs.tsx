@@ -12,25 +12,6 @@ export async function BlogSection() {
         limit: 4
     });
 
-    const mockPosts = [
-        {
-            title: "Exploring the Vibrant Markets of Bali",
-            description: "Discover the vibrant and colorful markets of Bali, where you can find unique handcrafted goods, spices, and delicious local cuisine.",
-        },
-        {
-            title: "Trekking Through the Lush Jungles of Java",
-            description: "Immerse yourself in the stunning natural beauty of Java's lush jungles, home to a diverse array of flora and fauna.",
-        },
-        {
-            title: "Discovering the Enchanting Temples of Yogyakarta",
-            description: "Explore the ancient and captivating temples of Yogyakarta, where you can immerse yourself in the rich cultural heritage of Indonesia.",
-        },
-        {
-            title: "Savoring the Flavors of Indonesian Cuisine",
-            description: "Indulge in the rich and diverse flavors of Indonesian cuisine, from spicy curries to fragrant rice dishes and delectable street food.",
-        },
-    ];
-
     return (
         <section className="w-full py-10 lg:pb-12 bg-muted">
             <div className="w-full h-full flex items-center justify-center">
