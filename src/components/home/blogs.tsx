@@ -2,9 +2,17 @@ import { Card, CardContent } from "~/components/ui/card";
 import { ArrowRightIcon } from "~/components/icons";
 import Link from "next/link";
 import Image from "next/image";
+import { db } from "~/server/db";
+import ReactMarkdown from "react-markdown";
 
-export function BlogSection() {
-    const posts = [
+export async function BlogSection() {
+    // Limit to 4 posts
+    const posts = await db.query.posts.findMany({
+        orderBy: (posts, { desc }) => [desc(posts.id)],
+        limit: 4
+    });
+
+    const mockPosts = [
         {
             title: "Exploring the Vibrant Markets of Bali",
             description: "Discover the vibrant and colorful markets of Bali, where you can find unique handcrafted goods, spices, and delicious local cuisine.",
@@ -33,12 +41,12 @@ export function BlogSection() {
                 </Link>
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                     {posts.map((post, index) => (
-                        <Card key={index}>
+                        <Card key={post.id}>
                             <CardContent className="space-y-2">
                                 <Image src="/placeholder.svg" width="400" height="225" alt="Blog Post" className="aspect-video rounded-md object-cover" />
-                                <h3 className="text-xl font-semibold">{post.title}</h3>
-                                <p className="text-muted-foreground line-clamp-3">{post.description}</p>
-                                <Link href="#" className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
+                                <h3 className="text-xl font-semibold">{post.name}</h3>
+                                <ReactMarkdown className="text-muted-foreground line-clamp-3">{post.content.substring(0, 300)}</ReactMarkdown>
+                                <Link href={`/blog/${post.url}`} className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline">
                                     Read More
                                     <ArrowRightIcon className="h-4 w-4" />
                                 </Link>

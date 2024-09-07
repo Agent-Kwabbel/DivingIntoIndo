@@ -10,6 +10,7 @@ import {
   varchar,
 } from "drizzle-orm/pg-core";
 import { type AdapterAccount } from "next-auth/adapters";
+import crypto from "crypto"
 
 /**
  * This is an example of how to use the multi-project schema feature of Drizzle ORM. Use the same
@@ -23,7 +24,7 @@ export const posts = createTable(
   "post",
   {
     id: serial("id").primaryKey(),
-    url: varchar("url", { length: 256 }).notNull(),
+    url: varchar("url", { length: 256 }).notNull().$defaultFn(() => crypto.randomBytes(8).toString('hex').slice(0, 8)),
     name: varchar("name", { length: 256 }).notNull(),
     content: text("content").notNull(),
     image: varchar("image", { length: 256 }).notNull(),
