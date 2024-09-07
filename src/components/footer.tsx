@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Separator } from "~/components/ui/separator";
 
 export function Footer() {
     return (
@@ -7,7 +8,7 @@ export function Footer() {
             <nav className="sm:ml-auto flex items-center gap-4 sm:gap-6">
                 <Link href="/terms" className="text-xs hover:underline underline-offset-4">Terms of Service</Link>
                 <Link href="/privacy" className="text-xs hover:underline underline-offset-4">Privacy</Link>
-                <div className="border-r-2 border-muted-foreground-foreground h-5" />
+                <Separator orientation="vertical" className="h-4" />
                 <Link href="https://github.com/Agent-Kwabbel/DivingIntoIndo" target="_blank" className="text-xs hover:underline underline-offset-4">GitHub</Link>
             </nav>
         </footer>
