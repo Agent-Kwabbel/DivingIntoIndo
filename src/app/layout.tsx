@@ -4,7 +4,7 @@ import { Navigation } from "@/src/components/navigation";
 import { Footer } from "@/src/components/footer";
 import { DM_Sans } from 'next/font/google'
 import { Space_Mono } from 'next/font/google'
-import { cn } from '@/lib/utils'
+import { cn } from '~/lib/utils'
 
 import { TRPCReactProvider } from "~/trpc/react";
 
