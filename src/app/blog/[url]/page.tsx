@@ -65,7 +65,7 @@ function Author({ username }: { username: string }) {
 }
 
 function PublishDate({ date }: { date: Date }) {
-    const dateString = date.toLocaleDateString("en-US", {
+    const dateString = date.toLocaleDateString("en-GB", {
         timeZone: "UTC",
         dateStyle: "long",
     });
