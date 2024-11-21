@@ -8,6 +8,7 @@ import {
   text,
   timestamp,
   varchar,
+  numeric,
 } from "drizzle-orm/pg-core";
 import { type AdapterAccount } from "next-auth/adapters";
 import crypto from "crypto"
@@ -131,4 +132,46 @@ export const verificationTokens = createTable(
   (vt) => ({
     compoundKey: primaryKey({ columns: [vt.identifier, vt.token] }),
   })
+);
+
+// Now we will make the activity table and the location table. We will also make a relationship between the two.
+// An activity has one location.
+
+// CREATE TABLE Activities (
+//     activity_id INT PRIMARY KEY AUTO_INCREMENT,
+//     title VARCHAR(100),
+//     description TEXT,
+//     status VARCHAR(50), -- E.g., 'Planned', 'Ongoing', 'Completed'
+//     start_time TIME,
+//     end_time TIME,
+//     location_id INT,
+// );
+
+// CREATE TABLE Locations (
+//     location_id INT PRIMARY KEY AUTO_INCREMENT,
+//     name VARCHAR(100),
+//     description TEXT,
+//     latitude DECIMAL(9, 6), -- For GPS coordinates
+//     longitude DECIMAL(9, 6),
+// );
+
+export const activities = createTable("activity", {
+  id: numeric("id").primaryKey(),
+  title: varchar("title", { length: 100 }).notNull(),
+  description: text("description").notNull(),
+  status: varchar("status", { length: 50 }).notNull(),
+  startTime: timestamp("start_time", { withTimezone: true }).notNull(),
+  endTime: timestamp("end_time", { withTimezone: true }).notNull(),
+  locationId: numeric("location_id", { precision: 9, scale: 0 }).notNull().references(() => locations.id),
+});
+
+export const locations = createTable(
+  "location",
+  {
+    id: numeric("id").primaryKey(),
+    name: varchar("name", { length: 100 }).notNull(),
+    description: text("description").notNull(),
+    latitude: numeric("latitude", { precision: 9, scale: 6 }).notNull(),
+    longitude: numeric("longitude", { precision: 9, scale: 6 }).notNull(),
+  }
 );
