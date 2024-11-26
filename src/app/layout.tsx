@@ -1,7 +1,5 @@
 import "~/styles/globals.css";
 
-import { Navigation } from "~/components/navigation";
-import { Footer } from "~/components/footer";
 import { DM_Sans } from 'next/font/google'
 import { Space_Mono } from 'next/font/google'
 import { cn } from '~/lib/utils'
@@ -26,11 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang="en">
         <body className={cn('antialiased', fontHeading.variable, fontBody.variable)}>
         <TRPCReactProvider>
-            <div className="flex flex-col min-h-[100dvh]">
-                <Navigation />
-                <main className="flex-1">{children}</main>
-                <Footer />
-            </div>
+            {children}
         </TRPCReactProvider>
         </body>
         </html>
