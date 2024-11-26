@@ -23,7 +23,7 @@ export function Navigation() {
               {navigationMenuLinks.map((link) => (
                 <NavigationMenuLink key={link.href} asChild>
                     <Link
-                      href={link.href}
+                      href={`/home${link.href}`}
                       className="group inline-flex h-9 w-max items-center justify-center rounded-lg px-4 py-2 text-base font-medium transition-all hover:underline underline-offset-2 focus:underline"
                       prefetch={false}
                     >

@@ -20,7 +20,7 @@ export async function BlogSection() {
         <div className="flex h-full w-full items-center justify-center">
           <div className="container px-4 md:px-6">
             <Link
-              href="/blog"
+              href="/home/blog"
               className="mb-6 inline-flex items-center gap-1 font-heading text-xl font-semibold hover:underline md:text-3xl"
             >
               Latest Blog Posts
@@ -42,7 +42,7 @@ export async function BlogSection() {
                       {stripHtml(post.content).substring(0, 300)}
                     </p>
                     <Link
-                      href={`/src/app/home/blog/${post.url}`}
+                      href={`/home/blog/${post.url}`}
                       className="inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline"
                     >
                       Read More
