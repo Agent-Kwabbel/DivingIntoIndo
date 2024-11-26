@@ -42,7 +42,7 @@ export async function BlogSection() {
                       {stripHtml(post.content).substring(0, 300)}
                     </p>
                     <Link
-                      href={`/blog/${post.url}`}
+                      href={`/src/app/home/blog/${post.url}`}
                       className="inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline"
                     >
                       Read More
