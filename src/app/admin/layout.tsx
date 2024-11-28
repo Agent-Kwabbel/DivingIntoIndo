@@ -19,7 +19,7 @@ export default function AdminLayout({children,}: { children: React.ReactNode }) 
         <body className={inter.className}>
         <TRPCReactProvider>
         <SidebarProvider>
-            <div className="flex h-screen">
+            <div className="flex h-screen w-full">
                 <AdminSidebar />
                 <main className="flex-1 overflow-auto">
                     {children}

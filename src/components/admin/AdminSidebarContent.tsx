@@ -15,8 +15,7 @@ const navItems = [
         items: [
             { title: "All Posts", url: "/admin/blog/posts" },
             { title: "New Post", url: "/admin/blog/new" },
-            { title: "Categories", url: "/admin/blog/categories" },
-            { title: "Tags", url: "/admin/blog/tags" },
+            { title: "Comments", url: "/admin/blog/comments" },
         ],
     },
     {
