@@ -9,7 +9,7 @@ export function QuickActions() {
                 <CardTitle>Quick Actions</CardTitle>
                 <CardDescription>Perform common tasks quickly.</CardDescription>
             </CardHeader>
-            <CardContent className="grid gap-4">
+            <CardContent className="grid gap-4 pt-1">
                 <Button className="w-full">
                     <Edit3 className="mr-2 h-4 w-4" />
                     New Blog Post

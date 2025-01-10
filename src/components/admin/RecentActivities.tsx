@@ -15,7 +15,7 @@ export function RecentActivities() {
             <CardHeader>
                 <CardTitle>Recent Activities</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="pt-1">
                 <div className="space-y-8">
                     {recentActivities.map((activity) => (
                         <div key={activity.id} className="flex items-center">

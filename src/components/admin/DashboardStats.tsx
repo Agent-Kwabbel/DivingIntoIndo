@@ -17,7 +17,7 @@ export function DashboardStats() {
                     <CardTitle className="text-sm font-medium">Total Views</CardTitle>
                     <BarChart className="h-4 w-4 text-muted-foreground" />
                 </CardHeader>
-                <CardContent>
+                <CardContent className="pt-1">
                     <div className="text-2xl font-bold">{stats.totalViews.toLocaleString()}</div>
                     <p className="text-xs text-muted-foreground">+20.1% from last month</p>
                 </CardContent>
@@ -27,7 +27,7 @@ export function DashboardStats() {
                     <CardTitle className="text-sm font-medium">Unique Visitors</CardTitle>
                     <Users className="h-4 w-4 text-muted-foreground" />
                 </CardHeader>
-                <CardContent>
+                <CardContent className="pt-1">
                     <div className="text-2xl font-bold">{stats.uniqueVisitors.toLocaleString()}</div>
                     <p className="text-xs text-muted-foreground">+10.5% from last month</p>
                 </CardContent>
@@ -37,7 +37,7 @@ export function DashboardStats() {
                     <CardTitle className="text-sm font-medium">Avg. Time on Site</CardTitle>
                     <Calendar className="h-4 w-4 text-muted-foreground" />
                 </CardHeader>
-                <CardContent>
+                <CardContent className="pt-1">
                     <div className="text-2xl font-bold">{stats.avgTimeOnSite}</div>
                     <p className="text-xs text-muted-foreground">+5.2% from last month</p>
                 </CardContent>
@@ -47,7 +47,7 @@ export function DashboardStats() {
                     <CardTitle className="text-sm font-medium">Bounce Rate</CardTitle>
                     <BarChart className="h-4 w-4 text-muted-foreground" />
                 </CardHeader>
-                <CardContent>
+                <CardContent className="pt-1">
                     <div className="text-2xl font-bold">{stats.bounceRate}</div>
                     <p className="text-xs text-muted-foreground">-3.1% from last month</p>
                 </CardContent>
