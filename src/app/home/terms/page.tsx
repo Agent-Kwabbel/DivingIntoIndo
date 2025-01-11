@@ -1,3 +1,24 @@
+import { type Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Terms of Service',
+  description: 'Terms of Service for Diving Into Indo',
+  openGraph: {
+    type: 'website',
+    url: 'https://divingintoindo.com/terms',
+    title: 'Terms of Service',
+    description: 'Terms of Service for Diving Into Indo',
+      images: [
+          {
+              url: 'https://divingintoindo.com/img/logo.png',
+              width: 512,
+              height: 512,
+              alt: '404 - Page Not Found',
+          },
+      ],
+  },
+}
+
 export default function Terms() {
   return (
     <div className="container mx-auto p-6">

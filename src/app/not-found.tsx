@@ -1,5 +1,25 @@
 import Link from 'next/link'
 import { WavesIcon as Wave } from 'lucide-react'
+import { type Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: '404 - Page Not Found',
+    description: 'Oops! Looks like you\'ve dived too deep. Check if the link is correct or try again in a few minutes.',
+    openGraph: {
+        type: 'website',
+        url: 'https://divingintoindo.com/404',
+        title: '404 - Page Not Found',
+        description: 'Oops! Looks like you\'ve dived too deep. Check if the link is correct or try again in a few minutes.',
+        images: [
+            {
+                url: 'https://divingintoindo.com/img/logo.png',
+                width: 512,
+                height: 512,
+                alt: '404 - Page Not Found',
+            },
+        ],
+    },
+}
 
 export default function Custom404() {
     return (

@@ -1,4 +1,24 @@
 import ContactForm from './ContactForm'
+import { type Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'Contact Us',
+    description: 'Contact Us for Diving Into Indo',
+    openGraph: {
+        type: 'website',
+        url: 'https://divingintoindo.com/contact',
+        title: 'Contact Us',
+        description: 'Contact Us for Diving Into Indo',
+        images: [
+            {
+                url: 'https://divingintoindo.com/img/logo.png',
+                width: 512,
+                height: 512,
+                alt: '404 - Page Not Found',
+            },
+        ],
+    },
+}
 
 export default function ContactPage() {
     return (

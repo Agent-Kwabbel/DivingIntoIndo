@@ -6,6 +6,26 @@ import Link from "next/link";
 import { db } from "~/server/db";
 import { asc, eq } from "drizzle-orm";
 import { activities, flags } from "~/server/db/schema";
+import { type Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: 'Diving into Indonesia',
+    description: 'Join us on an unforgettable journey as two students discover the breathtaking landscapes, rich culture, and vibrant cities of Indonesia.',
+    openGraph: {
+        type: 'website',
+        url: 'https://divingintoindo.com',
+        title: 'Diving into Indonesia',
+        description: 'Join us on an unforgettable journey as two students discover the breathtaking landscapes, rich culture, and vibrant cities of Indonesia.',
+        images: [
+            {
+                url: 'https://divingintoindo.com/img/logo.png',
+                width: 512,
+                height: 512,
+                alt: '404 - Page Not Found',
+            },
+        ],
+    },
+}
 
 export default async function Home() {
     const overrideStatusFlag = await db.select().from(flags).where(eq(flags.name, "override_status")).execute();

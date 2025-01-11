@@ -3,6 +3,26 @@
 import { useEffect } from 'react'
 import Link from 'next/link'
 import { AlertTriangleIcon, RefreshCcwIcon } from 'lucide-react'
+import { type Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: '500 - Server Error',
+    description: 'Uh-oh! The server malfunctioned. Don\'t panic! Try again in a few minutes or contact us.',
+    openGraph: {
+        type: 'website',
+        url: 'https://divingintoindo.com/500',
+        title: '500 - Server Error',
+        description: 'Uh-oh! The server malfunctioned. Don\'t panic! Try again in a few minutes or contact us.',
+        images: [
+            {
+                url: 'https://divingintoindo.com/img/logo.png',
+                width: 512,
+                height: 512,
+                alt: '404 - Page Not Found',
+            },
+        ],
+    },
+}
 
 export default function Error({error, reset,}: {
     error: Error & { digest?: string }

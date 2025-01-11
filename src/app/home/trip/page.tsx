@@ -4,6 +4,26 @@ import {activities, flags, locations} from "~/server/db/schema";
 import ItineraryPageClient from "./ItineraryPageClient";
 import { type StatusType } from "~/types/tripStatus";
 import { type StatusType as ActivityStatusType } from "~/types/itineraryStatus";
+import { type Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: 'Itinerary',
+    description: 'Check out the itinerary of our upcoming trip to Indonesia.',
+    openGraph: {
+        type: 'website',
+        url: 'https://divingintoindo.com/home/trip',
+        title: 'Itinerary',
+        description: 'Check out the itinerary of our upcoming trip to Indonesia.',
+        images: [
+            {
+                url: 'https://divingintoindo.com/img/logo.png',
+                width: 512,
+                height: 512,
+                alt: '404 - Page Not Found',
+            },
+        ],
+    },
+}
 
 function calculateStatus(startTime: Date, endTime: Date): StatusType {
     const now = new Date();

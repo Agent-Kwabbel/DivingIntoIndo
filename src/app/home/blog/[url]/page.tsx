@@ -6,6 +6,41 @@ import { Separator } from "~/components/ui/separator";
 import Image from "next/image";
 import "~/styles/post.css"
 import PostNotFound from "~/components/blog/notfound";
+import type { Metadata, ResolvingMetadata } from 'next'
+
+type Props = {
+    params: { url: string };
+};
+
+export async function generateMetadata(
+    { params }: Props,
+    parent: ResolvingMetadata
+): Promise<Metadata> {
+    // Fetch the post data based on the URL parameter
+    const post = await db.query.posts.findFirst({
+        where: eq(posts.url, params.url),
+    });
+
+    if (!post) {
+        return {
+            title: 'Post Not Found',
+            description: 'The requested blog post could not be found.',
+        };
+    }
+
+    // Optionally access parent metadata for extensions
+    const previousImages = (await parent).openGraph?.images || [];
+
+    return {
+        title: post.name,
+        description: post.content.slice(0, 150), // Take the first 150 characters of the content as a description
+        openGraph: {
+            title: post.name,
+            description: post.content.slice(0, 150),
+            images: [`/img/uploads/${post.image}`, ...previousImages],
+        },
+    };
+}
 
 export default async function Page({ params }: { params: { url: string } }) {
     const post = await db.query.posts.findFirst({
