@@ -4,6 +4,15 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 export default {
     darkMode: ["class"],
     content: ["./src/**/*.tsx"],
+	safelist: [
+		'bg-gray-500',     // Upcoming
+		'bg-sky-500',      // In Progress
+		'bg-green-500',    // Completed
+		'bg-orange-500',   // Delayed
+		'bg-yellow-500',   // Postponed
+		'bg-red-700',      // Terminated
+		'bg-purple-500',   // Extended
+	],
   theme: {
   	extend: {
   		fontFamily: {

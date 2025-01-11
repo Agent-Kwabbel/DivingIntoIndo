@@ -57,7 +57,7 @@ export async function BlogListing() {
                                 <p className="text-muted-foreground line-clamp-3">{stripHtml(post.content).substring(0, 400)}...</p>
                             </CardContent>
                             <CardFooter className="p-0 pt-4 flex justify-between items-center">
-                                <Link href={`/src/app/home/blog/${post.url}`}>
+                                <Link href={`/home/blog/${post.url}`}>
                                     <Button>Read More</Button>
                                 </Link>
                                 <div className="flex flex-col lg:flex-row items-center space-x-2">

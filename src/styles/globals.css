@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+.bg-gray-500 {
+    background-color: #6b7280;
+}
+
+.bg-sky-500 {
+    background-color: #0ea5e9;
+}
+
+.bg-green-500 {
+    background-color: #22c55e;
+}
+
+.bg-orange-500 {
+    background-color: #f97316;
+}
+
+.bg-yellow-500 {
+    background-color: #eab308;
+}
+
+.bg-red-700 {
+    background-color: #b91c1c;
+}
+
 @layer base {
     :root {
         --background: 36 39% 88%;

@@ -159,7 +159,7 @@ export const activities = createTable("activity", {
   id: numeric("id").primaryKey(),
   title: varchar("title", { length: 100 }).notNull(),
   description: text("description").notNull(),
-  status: varchar("status", { length: 50 }).notNull(),
+  status: varchar("status", { length: 50 }),
   startTime: timestamp("start_time", { withTimezone: true }).notNull(),
   endTime: timestamp("end_time", { withTimezone: true }).notNull(),
   locationId: numeric("location_id", { precision: 9, scale: 0 }).notNull().references(() => locations.id),

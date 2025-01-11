@@ -1,42 +1,7 @@
 import { ClockIcon } from "~/components/icons";
 import TimeDisplay from './time';
-
-type StatusType = "Upcoming" | "In Progress" | "Completed" | "Delayed" | "Postponed" | "Terminated" | "Extended";
-
-const statusOptions: Record<StatusType, { color: string; ping: boolean; description?: string }> = {
-  "Upcoming": {
-    color: "bg-gray-500",
-    ping: false,
-  },
-  "In Progress": {
-    color: "bg-sky-500",
-    ping: true,
-  },
-  "Completed": {
-    color: "bg-green-500",
-    ping: false,
-  },
-  "Delayed": {
-    color: "bg-orange-500",
-    ping: true,
-    description: "Some activities may be delayed, rescheduled or cancelled.",
-  },
-  "Postponed": {
-    color: "bg-yellow-500",
-    ping: false,
-    description: "Trip has been postponed to a later date.",
-  },
-  "Terminated": {
-    color: "bg-red-700",
-    ping: false,
-    description: "Trip has been terminated prematurely.",
-  },
-  "Extended": {
-    color: "bg-purple-500",
-    ping: true,
-    description: "Trip has been extended beyond the original itinerary.",
-  },
-}
+import { type StatusType } from "~/types/tripStatus";
+import { statusOptions } from "~/types/tripStatus";
 
 const status: StatusType = "Upcoming";
 
@@ -62,9 +27,9 @@ function Circle({ status }: { status: StatusType }) {
     return (
       <span className="relative flex h-4 w-4">
           {statusOptions[status].ping && (
-            <span className={`absolute animate-ping inline-flex h-full w-full rounded-full ${statusOptions[status].color}`}></span>
+            <span className={`absolute animate-ping inline-flex h-full w-full rounded-full bg-${statusOptions[status].color}`}></span>
           )}
-          <span className={`relative inline-flex rounded-full h-4 w-4 ${statusOptions[status].color}`} title="Is the status circle pusling? Than the trip is ongoing!"></span>
+          <span className={`relative inline-flex rounded-full h-4 w-4 bg-${statusOptions[status].color}`} title="Is the status circle pusling? Than the trip is ongoing!"></span>
       </span>
     );
 }
