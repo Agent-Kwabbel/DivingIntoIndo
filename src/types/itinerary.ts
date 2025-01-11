@@ -1,4 +1,4 @@
-import { StatusType } from "./itineraryStatus";
+import { type StatusType } from "./itineraryStatus";
 
 export type Location = {
     name: string
