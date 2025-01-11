@@ -2,7 +2,7 @@
 
 import { db } from "~/server/db"
 import { eq } from "drizzle-orm"
-import { contactSubmission } from "~/server/db/schema"
+import { contactSubmission, flags } from "~/server/db/schema"
 
 interface ContactFormData {
     name: string
@@ -13,6 +13,11 @@ interface ContactFormData {
 
 export async function submitContactForm(data: ContactFormData) {
     try {
+        const flag = await db.select().from(flags).where(eq(flags.name, "override_status")).execute()
+        if (flag[0]?.status != "null") {
+            return { success: false, message: 'The contact form is currently closed. Please try again later.' }
+        }
+
         const now = new Date()
         const submissions = await db.select().from(contactSubmission).where(eq(contactSubmission.ip, data.ip)).execute()
         if (submissions.length > 0 && submissions[0]?.createdAt && now.getTime() - new Date(submissions[0].createdAt).getTime() < 60 * 60 * 1000) {
