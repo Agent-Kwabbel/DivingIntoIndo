@@ -42,7 +42,7 @@ export function Navigation() {
               <SheetContent side="right" className="sm:max-w-xs">
                   <nav className="grid gap-6 text-lg font-medium">
                       {navigationMenuLinks.map((link) => (
-                        <Link key={link.href} href={link.href} className="flex items-center gap-4 px-2.5 text-foreground" prefetch={false}>
+                        <Link key={link.href} href={`/home${link.href}`} className="flex items-center gap-4 px-2.5 text-foreground" prefetch={false}>
                             {link.icon}
                             {link.label}
                         </Link>
