@@ -11,7 +11,7 @@ const ItineraryList: React.FC<ItineraryListProps> = ({ items, selectedItemId, on
     );
 
     // If no items are "In Progress", find the closest past end times
-    let blinkingItems: Set<number> = new Set();
+    let blinkingItems = new Set<number>();
     if (inProgressItems.length > 0) {
         blinkingItems = new Set(inProgressItems.map((item) => item.id));
     } else {
