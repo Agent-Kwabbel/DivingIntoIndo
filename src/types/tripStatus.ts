@@ -1,4 +1,4 @@
-export type StatusType = "Upcoming" | "In Progress" | "Completed" | "Delayed" | "Postponed" | "Terminated" | "Extended";
+export type StatusType = "Upcoming" | "In Progress" | "Completed" | "Delays" | "Terminated" | "Extended";
 
 export const statusOptions: Record<StatusType, { color: string; ping: boolean; description?: string }> = {
     "Upcoming": {
@@ -13,15 +13,10 @@ export const statusOptions: Record<StatusType, { color: string; ping: boolean; d
         color: "green-500",
         ping: false,
     },
-    "Delayed": {
+    "Delays": {
         color: "orange-500",
         ping: true,
         description: "Some activities may be delayed, rescheduled or cancelled.",
-    },
-    "Postponed": {
-        color: "yellow-500",
-        ping: false,
-        description: "Trip has been postponed to a later date.",
     },
     "Terminated": {
         color: "red-700",

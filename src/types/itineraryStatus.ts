@@ -1,9 +1,9 @@
-export type StatusType = "Upcoming" | "In Progress" | "Completed" | "Delayed" | "Postponed" | "Terminated" | "Extended";
+export type StatusType = "Upcoming" | "In Progress" | "Completed" | "Delayed" | "Postponed" | "Cancelled" | "Extended";
 
 export const statusOptions: Record<StatusType, { color: string; description: string }> = {
     "Upcoming": {
         color: "gray-500",
-        description: "This activity is still upcoming."
+        description: "This activity is still upcoming and hasn't started yet."
     },
     "In Progress": {
         color: "sky-500",
@@ -21,12 +21,12 @@ export const statusOptions: Record<StatusType, { color: string; description: str
         color: "yellow-500",
         description: "This activity has been postponed to a later date.",
     },
-    "Terminated": {
+    "Cancelled": {
         color: "red-700",
-        description: "This activity has been terminated prematurely.",
+        description: "This planned activity has been cancelled.",
     },
     "Extended": {
         color: "purple-500",
-        description: "This activity has been extended beyond the original itinerary.",
+        description: "This activity has been changed and extended beyond the original itinerary.",
     },
 }
