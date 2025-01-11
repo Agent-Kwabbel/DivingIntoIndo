@@ -11,3 +11,11 @@
 //         </div>
 //     )
 // }
+
+export default function BlogPostsPage() {
+    return (
+        <div className="flex flex-col h-full">
+            <p>temp</p>
+        </div>
+    )
+}

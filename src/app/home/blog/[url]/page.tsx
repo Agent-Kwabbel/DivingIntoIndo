@@ -29,7 +29,7 @@ export async function generateMetadata(
     }
 
     // Optionally access parent metadata for extensions
-    const previousImages = (await parent).openGraph?.images || [];
+    const previousImages = (await parent).openGraph?.images ?? [];
 
     return {
         title: post.name,

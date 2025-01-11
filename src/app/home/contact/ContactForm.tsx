@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { useRouter } from 'next/navigation'
 import { submitContactForm } from './actions'
 import axios from 'axios'
 import * as AlertDialog from '@radix-ui/react-alert-dialog'
@@ -43,6 +42,7 @@ export default function ContactForm() {
                 setDialogMessage(response.message ?? 'An unexpected error occurred.')
             }
         } catch (error) {
+            console.error(error)
             setDialogMessage('There was an error submitting your message. Please try again.')
         } finally {
             setIsSubmitting(false)
