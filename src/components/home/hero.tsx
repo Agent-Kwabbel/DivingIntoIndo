@@ -1,13 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
+import { list } from "@vercel/blob"
 
-export function Hero() {
+export async function Hero() {
+    const response = await list({"prefix": "hero/"})
+    console.log(response)
+    const heroImages = response.blobs.filter((item) => item.pathname.includes(".webp"))
+    const randomIndex = Math.floor(Math.random() * heroImages.length);
+    const heroImage = heroImages[randomIndex] ?? { url: "" };
+
     return (
         <section className="w-full pt-4 pb-10 lg:pb-12 px-8 md:px-16">
             <div className=" w-full">
                 <div className="w-full grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-20 xl:grid-cols-[1fr_600px]">
                     <Image
-                        src={"/img/hero/" + Math.floor(Math.random() * 8) + ".webp"}
+                        src={heroImage?.url || "/img/'placeholder.svg"}
                         width="550"
                         height="550"
                         alt="Hero"

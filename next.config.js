@@ -5,6 +5,10 @@
 await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+    images: {
+        domains: ["2kvxq9bk6lplqk9c.public.blob.vercel-storage.com"],
+    },
+};
 
 export default config;

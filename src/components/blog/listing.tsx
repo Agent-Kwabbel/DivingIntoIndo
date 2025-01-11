@@ -44,7 +44,7 @@ export async function BlogListing() {
                     <div className="md:flex">
                         <div className="md:1/3 lg:w-1/5">
                             <Image
-                                src={`/img/uploads/${post.image}`}
+                                src={post.image}
                                 alt={post.name}
                                 width={300}
                                 height={200}

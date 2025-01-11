@@ -31,7 +31,7 @@ export async function BlogSection() {
                 <Card key={post.id}>
                   <CardContent className="space-y-2">
                     <Image
-                      src={`/img/uploads/${post.image}`}
+                      src={post.image}
                       width="400"
                       height="225"
                       alt="Blog Post"

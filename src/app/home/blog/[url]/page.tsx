@@ -28,7 +28,6 @@ export async function generateMetadata(
         };
     }
 
-    // Optionally access parent metadata for extensions
     const previousImages = (await parent).openGraph?.images ?? [];
 
     return {
@@ -37,7 +36,7 @@ export async function generateMetadata(
         openGraph: {
             title: post.name,
             description: post.content.slice(0, 150),
-            images: [`/img/uploads/${post.image}`, ...previousImages],
+            images: [post.image, ...previousImages],
         },
     };
 }
@@ -56,7 +55,7 @@ export default async function Page({ params }: { params: { url: string } }) {
     return (
       <div className="flex flex-col min-h-[100dvh]">
           <Image
-            src={`/img/uploads/${post.image}`}
+            src={post.image}
             width={1920}
             height={600}
             alt={post.name}
