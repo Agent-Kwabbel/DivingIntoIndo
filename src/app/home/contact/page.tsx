@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
     return (
-        <div className="flex justify-center items-center mt-10">
+        <div className="flex justify-center items-center sm:mt-10 m-4">
             <div>
                 <div>
                     <h2 className="text-2xl font-semibold mb-4">Send us a Message</h2>
