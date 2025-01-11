@@ -5,13 +5,14 @@ import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar";
 import { Separator } from "~/components/ui/separator";
 import Image from "next/image";
 import "~/styles/post.css"
+import PostNotFound from "~/components/blog/notfound";
 
 export default async function Page({ params }: { params: { url: string } }) {
     const post = await db.query.posts.findFirst({
         where: eq(posts.url, params.url)
     });
 
-    if (!post) return <div>Post not found</div>;
+    if (!post) return <PostNotFound />;
 
     const user = await db.query.users.findFirst({
         where: eq(users.id, post.createdById)

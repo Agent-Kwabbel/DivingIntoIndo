@@ -3,7 +3,7 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
     darkMode: ["class"],
-    content: ["./src/**/*.tsx"],
+    content: ["./src/**/*.tsx", "./src/**/*.js"],
 	safelist: [
 		'bg-gray-500',     // Upcoming
 		'bg-sky-500',      // In Progress
