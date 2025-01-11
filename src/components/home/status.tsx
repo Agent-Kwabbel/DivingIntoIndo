@@ -7,7 +7,7 @@ const status: StatusType = "Upcoming";
 
 export function StatusSection() {
     return (
-      <section className="w-full py-10">
+      <section className="w-full pt-10">
         <div className="flex h-full w-full flex-col items-center justify-center">
           <h3 className="text-lg font-medium">Trip Status:</h3>
             <div className="flex items-center gap-4">

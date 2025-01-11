@@ -55,7 +55,7 @@ export default function ItineraryPageClient({
     return (
         <>
             <StatusSection />
-            <div className="flex flex-col h-full items-center justify-center">
+            <div className="flex flex-col h-full items-center justify-center pt-10">
                 <div className="flex h-[80vh] w-4/5 mx-12 p-4 border-2 border-border rounded-lg bg-secondary">
                     <MapComponent
                         isLoaded={isLoaded}
