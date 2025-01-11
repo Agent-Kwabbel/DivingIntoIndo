@@ -13,7 +13,7 @@ const MapComponent: React.FC<MapComponentProps> = ({
        onUnmount
    }) => {
     return (
-        <div className="w-1/2 h-full rounded-md">
+        <div className="w-full md:w-1/2 h-full rounded-md">
             {isLoaded ? (
                 <GoogleMap mapContainerClassName="rounded-md"
                     mapContainerStyle={mapContainerStyle}

@@ -56,7 +56,7 @@ const ItineraryPageClient: React.FC<ItineraryPageClientProps> = ({ itineraryItem
         <>
             <StatusSection status={status} />
             <div className="flex flex-col h-full items-center justify-center pt-10">
-                <div className="flex h-[80vh] w-4/5 mx-12 p-4 border-2 border-border rounded-lg bg-secondary">
+                <div className="flex flex-col md:flex-row h-[80vh] lg:w-4/5 w-11/12 mx-12 p-4 border-2 border-border rounded-lg bg-secondary">
                     <MapComponent
                         isLoaded={isLoaded}
                         center={selectedLocation ?? defaultCenter} // Default center if no location is selected
@@ -78,7 +78,7 @@ const ItineraryPageClient: React.FC<ItineraryPageClientProps> = ({ itineraryItem
                         }}
                     />
                 </div>
-                <p className="text-sm text-gray-400 my-4">
+                <p className="text-sm text-gray-400 my-4 text-center mx-1">
                     Disclaimer: The itinerary provided is subject to change and may not always
                     reflect the most up-to-date details.
                 </p>

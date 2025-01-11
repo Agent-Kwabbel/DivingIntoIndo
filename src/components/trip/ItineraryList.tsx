@@ -29,8 +29,8 @@ const ItineraryList: React.FC<ItineraryListProps> = ({ items, selectedItemId, on
     }
 
     return (
-        <div className="h-full w-1/2 overflow-y-auto px-4">
-            <div className="flex h-24">
+        <div className="h-full w-full md:w-1/2 overflow-y-auto px-0 sm:px-4 mt-8 sm:mt-0">
+            <div className="hidden sm:flex h-24">
                 <div className="relative w-16">
                     <div
                         className="absolute bottom-0 left-1/2 h-1/2 w-[6px] -translate-x-1/2 transform bg-primary"
@@ -60,7 +60,7 @@ const ItineraryList: React.FC<ItineraryListProps> = ({ items, selectedItemId, on
                 />
             ))}
 
-            <div className="flex h-24">
+            <div className="hidden sm:flex h-24">
                 <div className="relative w-16">
                     <div
                         className="absolute top-0 left-1/2 h-1/2 w-[6px] -translate-x-1/2 transform bg-primary"
