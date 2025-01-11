@@ -4,9 +4,10 @@ import React, { useState, useCallback } from "react";
 import { useJsApiLoader } from "@react-google-maps/api";
 import MapComponent from "~/components/trip/Map";
 import ItineraryList from "~/components/trip/ItineraryList";
-import { StatusSection } from "~/components/home/status";
+import StatusSection from "~/components/home/status";
 import { type Location } from "~/types/itinerary";
 import { type StatusType } from "~/types/itineraryStatus";
+import { type StatusType as TripStatusType } from "~/types/tripStatus";
 
 interface ItineraryItem {
     id: number;
@@ -20,6 +21,7 @@ interface ItineraryItem {
 
 interface ItineraryPageClientProps {
     itineraryItems: ItineraryItem[];
+    status: TripStatusType;
 }
 
 const mapContainerStyle = {
@@ -32,9 +34,7 @@ const defaultCenter = {
     lng: 110.7599,
 };
 
-export default function ItineraryPageClient({
-                                                itineraryItems,
-                                            }: ItineraryPageClientProps) {
+const ItineraryPageClient: React.FC<ItineraryPageClientProps> = ({ itineraryItems, status }) => {
     const [selectedLocation, setSelectedLocation] = useState<Location | null>(null);
     const [map, setMap] = useState<google.maps.Map | null>(null);
     const [selectedItemId, setSelectedItemId] = useState<number | null>(null);
@@ -54,12 +54,12 @@ export default function ItineraryPageClient({
 
     return (
         <>
-            <StatusSection />
+            <StatusSection status={status} />
             <div className="flex flex-col h-full items-center justify-center pt-10">
                 <div className="flex h-[80vh] w-4/5 mx-12 p-4 border-2 border-border rounded-lg bg-secondary">
                     <MapComponent
                         isLoaded={isLoaded}
-                        center={selectedLocation ?? defaultCenter} // default center if no location is selected
+                        center={selectedLocation ?? defaultCenter} // Default center if no location is selected
                         mapContainerStyle={mapContainerStyle}
                         selectedLocation={selectedLocation}
                         onLoad={onLoad}
@@ -85,4 +85,6 @@ export default function ItineraryPageClient({
             </div>
         </>
     );
-}
+};
+
+export default ItineraryPageClient;

@@ -16,7 +16,7 @@ export const statusOptions: Record<StatusType, { color: string; ping: boolean; d
     "Delays": {
         color: "orange-500",
         ping: true,
-        description: "Some activities may be delayed, rescheduled or cancelled.",
+        description: "Some recent or upcoming activities may be delayed, rescheduled or cancelled.",
     },
     "Terminated": {
         color: "red-700",
