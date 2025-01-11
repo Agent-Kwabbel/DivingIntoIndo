@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@auth/drizzle-adapter':
         specifier: ^1.1.0
-        version: 1.4.2
+        version: 1.4.2(nodemailer@6.9.16)
       '@radix-ui/react-alert-dialog':
         specifier: ^1.1.4
         version: 1.1.4(@types/react-dom@18.3.0)(@types/react@18.3.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -91,7 +91,7 @@ importers:
         version: 14.2.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-auth:
         specifier: ^4.24.7
-        version: 4.24.7(next@14.2.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 4.24.7(next@14.2.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(nodemailer@6.9.16)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       postgres:
         specifier: ^3.4.4
         version: 3.4.4
@@ -2445,6 +2445,10 @@ packages:
     resolution: {integrity: sha512-IRUxE4BVsHWXkV/SFOut4qTlagw2aM8T5/vnTsmrHJvVoKueJHRc/JaFND7QDDc61kLYUJ6qlZM3sqTSyx2dTw==}
     hasBin: true
 
+  nodemailer@6.9.16:
+    resolution: {integrity: sha512-psAuZdTIRN08HKVd/E8ObdV6NO7NTBY3KsC30F7M4H1OnmLCUNaS56FpYxyb26zWLSyYF9Ozch9KYHhHegsiOQ==}
+    engines: {node: '>=6.0.0'}
+
   normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
@@ -3218,7 +3222,7 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@auth/core@0.34.2':
+  '@auth/core@0.34.2(nodemailer@6.9.16)':
     dependencies:
       '@panva/hkdf': 1.2.1
       '@types/cookie': 0.6.0
@@ -3227,10 +3231,12 @@ snapshots:
       oauth4webapi: 2.12.1
       preact: 10.11.3
       preact-render-to-string: 5.2.3(preact@10.11.3)
+    optionalDependencies:
+      nodemailer: 6.9.16
 
-  '@auth/drizzle-adapter@1.4.2':
+  '@auth/drizzle-adapter@1.4.2(nodemailer@6.9.16)':
     dependencies:
-      '@auth/core': 0.34.2
+      '@auth/core': 0.34.2(nodemailer@6.9.16)
     transitivePeerDependencies:
       - '@simplewebauthn/browser'
       - '@simplewebauthn/server'
@@ -5482,7 +5488,7 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  next-auth@4.24.7(next@14.2.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  next-auth@4.24.7(next@14.2.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(nodemailer@6.9.16)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@babel/runtime': 7.25.6
       '@panva/hkdf': 1.2.1
@@ -5496,6 +5502,8 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       uuid: 8.3.2
+    optionalDependencies:
+      nodemailer: 6.9.16
 
   next@14.2.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
@@ -5523,6 +5531,9 @@ snapshots:
       - babel-plugin-macros
 
   node-gyp-build@4.8.2: {}
+
+  nodemailer@6.9.16:
+    optional: true
 
   normalize-path@3.0.0: {}
 
