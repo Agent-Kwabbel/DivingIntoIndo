@@ -4,7 +4,6 @@ import { list } from "@vercel/blob"
 
 export async function Hero() {
     const response = await list({"prefix": "hero/"})
-    console.log(response)
     const heroImages = response.blobs.filter((item) => item.pathname.includes(".webp"))
     const randomIndex = Math.floor(Math.random() * heroImages.length);
     const heroImage = heroImages[randomIndex] ?? { url: "" };
