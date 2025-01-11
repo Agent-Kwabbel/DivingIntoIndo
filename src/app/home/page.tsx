@@ -13,12 +13,12 @@ export const metadata: Metadata = {
     description: 'Join us on an unforgettable journey as two students discover the breathtaking landscapes, rich culture, and vibrant cities of Indonesia.',
     openGraph: {
         type: 'website',
-        url: 'https://divingintoindo.com',
+        url: 'https://divingintoindo.xyz',
         title: 'Diving into Indonesia',
         description: 'Join us on an unforgettable journey as two students discover the breathtaking landscapes, rich culture, and vibrant cities of Indonesia.',
         images: [
             {
-                url: 'https://divingintoindo.com/img/logo.png',
+                url: 'https://divingintoindo.xyz/img/logo.png',
                 width: 512,
                 height: 512,
                 alt: '404 - Page Not Found',

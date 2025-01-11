@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   description: 'Terms of Service for Diving Into Indo',
   openGraph: {
     type: 'website',
-    url: 'https://divingintoindo.com/terms',
+    url: 'https://divingintoindo.xyz/terms',
     title: 'Terms of Service',
     description: 'Terms of Service for Diving Into Indo',
       images: [
           {
-              url: 'https://divingintoindo.com/img/logo.png',
+              url: 'https://divingintoindo.xyz/img/logo.png',
               width: 512,
               height: 512,
               alt: '404 - Page Not Found',

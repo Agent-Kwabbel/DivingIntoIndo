@@ -10,12 +10,12 @@ export const metadata: Metadata = {
     description: 'Uh-oh! The server malfunctioned. Don\'t panic! Try again in a few minutes or contact us.',
     openGraph: {
         type: 'website',
-        url: 'https://divingintoindo.com/500',
+        url: 'https://divingintoindo.xyz/500',
         title: '500 - Server Error',
         description: 'Uh-oh! The server malfunctioned. Don\'t panic! Try again in a few minutes or contact us.',
         images: [
             {
-                url: 'https://divingintoindo.com/img/logo.png',
+                url: 'https://divingintoindo.xyz/img/logo.png',
                 width: 512,
                 height: 512,
                 alt: '404 - Page Not Found',

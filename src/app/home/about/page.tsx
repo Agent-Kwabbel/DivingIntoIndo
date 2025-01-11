@@ -6,12 +6,12 @@ export const metadata: Metadata = {
     description: 'About Us for Diving Into Indo',
     openGraph: {
         type: 'website',
-        url: 'https://divingintoindo.com/about',
+        url: 'https://divingintoindo.xyz/about',
         title: 'About Us',
         description: 'About Us for Diving Into Indo',
         images: [
             {
-                url: 'https://divingintoindo.com/img/logo.png',
+                url: 'https://divingintoindo.xyz/img/logo.png',
                 width: 512,
                 height: 512,
                 alt: '404 - Page Not Found',

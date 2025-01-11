@@ -11,12 +11,12 @@ export const metadata: Metadata = {
     description: 'Check out the itinerary of our upcoming trip to Indonesia.',
     openGraph: {
         type: 'website',
-        url: 'https://divingintoindo.com/home/trip',
+        url: 'https://divingintoindo.xyz/home/trip',
         title: 'Itinerary',
         description: 'Check out the itinerary of our upcoming trip to Indonesia.',
         images: [
             {
-                url: 'https://divingintoindo.com/img/logo.png',
+                url: 'https://divingintoindo.xyz/img/logo.png',
                 width: 512,
                 height: 512,
                 alt: '404 - Page Not Found',

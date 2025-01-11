@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   description: 'Privacy Statement for Diving Into Indo',
   openGraph: {
     type: 'website',
-    url: 'https://divingintoindo.com/privacy',
+    url: 'https://divingintoindo.xyz/privacy',
     title: 'Privacy Statement',
     description: 'Privacy Statement for Diving Into Indo',
       images: [
           {
-              url: 'https://divingintoindo.com/img/logo.png',
+              url: 'https://divingintoindo.xyz/img/logo.png',
               width: 512,
               height: 512,
               alt: '404 - Page Not Found',
