@@ -185,3 +185,15 @@ export const flags = createTable(
     status: varchar("status", { length: 50 })
   }
 );
+
+export const contactSubmission = createTable(
+  "contact_submission",
+  {
+    id: numeric("id").primaryKey(),
+    ip: varchar("ip", { length: 255 }).notNull(),
+    name: varchar("name", { length: 255 }).notNull(),
+    email: varchar("email", { length: 255 }).notNull(),
+    message: text("message").notNull(),
+    createdAt: timestamp("created_at", { withTimezone: true }).default(sql`CURRENT_TIMESTAMP`)
+  }
+);
