@@ -175,3 +175,13 @@ export const locations = createTable(
     longitude: numeric("longitude", { precision: 9, scale: 6 }).notNull(),
   }
 );
+
+export const flags = createTable(
+  "flag",
+  {
+    id: numeric("id").primaryKey(),
+    name: varchar("name", { length: 100 }).notNull(),
+    description: text("description").notNull(),
+    status: varchar("status", { length: 50 })
+  }
+);
