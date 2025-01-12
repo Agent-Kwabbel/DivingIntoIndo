@@ -1,4 +1,6 @@
 import "~/styles/globals.css";
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import { DM_Sans } from 'next/font/google'
 import { Space_Mono } from 'next/font/google'
@@ -25,6 +27,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <body className={cn('antialiased', fontHeading.variable, fontBody.variable)}>
         <TRPCReactProvider>
             {children}
+            <Analytics />
+            <SpeedInsights />
         </TRPCReactProvider>
         </body>
         </html>
