@@ -1,31 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.bg-gray-500 {
-    background-color: #6b7280;
-}
-
-.bg-sky-500 {
-    background-color: #0ea5e9;
-}
-
-.bg-green-500 {
-    background-color: #22c55e;
-}
-
-.bg-orange-500 {
-    background-color: #f97316;
-}
-
-.bg-yellow-500 {
-    background-color: #eab308;
-}
-
-.bg-red-700 {
-    background-color: #b91c1c;
-}
-
 @layer base {
     :root {
         --background: 36 39% 88%;
@@ -57,16 +32,16 @@
         --sidebar-border: 220 13% 91%;
         --sidebar-ring: 217.2 91.2% 59.8%;
     }
-  .dark {
-        --sidebar-background: 240 5.9% 10%;
-        --sidebar-foreground: 240 4.8% 95.9%;
-        --sidebar-primary: 224.3 76.3% 48%;
-        --sidebar-primary-foreground: 0 0% 100%;
-        --sidebar-accent: 240 3.7% 15.9%;
-        --sidebar-accent-foreground: 240 4.8% 95.9%;
-        --sidebar-border: 240 3.7% 15.9%;
-        --sidebar-ring: 217.2 91.2% 59.8%;
-    }
+  /*.dark {*/
+  /*      --sidebar-background: 240 5.9% 10%;*/
+  /*      --sidebar-foreground: 240 4.8% 95.9%;*/
+  /*      --sidebar-primary: 224.3 76.3% 48%;*/
+  /*      --sidebar-primary-foreground: 0 0% 100%;*/
+  /*      --sidebar-accent: 240 3.7% 15.9%;*/
+  /*      --sidebar-accent-foreground: 240 4.8% 95.9%;*/
+  /*      --sidebar-border: 240 3.7% 15.9%;*/
+  /*      --sidebar-ring: 217.2 91.2% 59.8%;*/
+  /*  }*/
 }
 
 @layer base {
